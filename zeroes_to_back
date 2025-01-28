@@ -1,0 +1,4 @@
+new_list = list(map(int, input().split(", ")))
+zeroes_list = [x for x in new_list if x != 0] + [x for x in new_list if x == 0]
+print(zeroes_list)
+
