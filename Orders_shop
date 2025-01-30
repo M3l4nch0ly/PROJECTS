@@ -1,0 +1,16 @@
+product = input()
+amount = float(input())
+price = 0
+def order(amount, price):
+    return amount * price
+if product == 'coffee':
+    price += 1.50
+elif product == 'water':
+    price += 1.00
+elif product == 'coke':
+    price += 1.40
+elif product == 'snacks':
+    price += 2.00
+print(f'{order(amount,price):.2f}')
+
+
