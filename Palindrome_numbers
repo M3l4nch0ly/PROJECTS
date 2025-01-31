@@ -1,0 +1,12 @@
+command = input().split(", ")
+
+
+def palindrome(list):
+    for n in list:
+       if n == n[::-1]:
+          print('True')
+       else:
+           print('False')
+
+
+palindrome(command)
