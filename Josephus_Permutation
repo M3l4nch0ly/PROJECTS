@@ -1,0 +1,20 @@
+circle = [int(x) for x in input().split()]
+skip_number = int(input())
+counter = 0
+index = 0
+kill_order = []
+
+while circle:
+    counter += 1
+    if counter % skip_number != 0:
+        index += 1
+        if index >= len(circle):
+            index = 0
+        continue
+
+    kill_order.append(circle.pop(index))
+    if index >= len(circle):
+        index = 0
+
+
+print(str(kill_order).replace(' ', ''))
