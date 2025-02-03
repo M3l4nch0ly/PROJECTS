@@ -1,0 +1,14 @@
+def get_closest_point(x, y, x2, y2):
+    first_point = abs(x) + abs(y)
+    second_point = abs(x2) + abs(y2)
+    if first_point <= second_point:
+        return x, y
+
+    return x2, y2
+
+
+x1 = float(input()).__floor__()
+y1 = float(input()).__floor__()
+x2 = float(input()).__floor__()
+y2 = float(input()).__floor__()
+print(get_closest_point(x1, y1, x2, y2))
