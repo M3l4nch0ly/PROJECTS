@@ -1,0 +1,9 @@
+numbers = [int(x) for x in input().split()]
+
+result = sorted([x for x in numbers if x > sum(numbers)/len(numbers)], reverse=True)
+while result:
+    print(*result[:5])
+    break
+
+else:
+    print("No")
