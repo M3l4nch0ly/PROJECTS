@@ -1,0 +1,29 @@
+neighborhood = [int(x) for x in input().split("@")]
+jump_data = input()
+neighborhood_len = len(neighborhood)
+index = 0
+while jump_data != "Love!":
+    index += int(jump_data.split()[-1])
+    if index >= neighborhood_len:
+        index = 0
+
+    if neighborhood[index] > 2:
+        neighborhood[index] -= 2
+    else:
+        if neighborhood[index] != 0:
+            neighborhood[index] -= 2
+            text = "has"
+
+        else:
+            text = "already had"
+        print(f"Place {index} {text} Valentine's day.")
+
+
+    jump_data = input()
+
+print(f"Cupid's last position was {index}.")
+failed = sum(1 for x in neighborhood if x != 0)
+if failed:
+    print(f"Cupid has failed {failed} places.")
+else:
+    print("Mission was successful.")
